@@ -1,11 +1,12 @@
-#include <iostream>
-#include <chrono>
+#include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
-using namespace std;
 
-int main() {
+int 
+main(int argc, char *argv[])
+{
     fork();
-    cout << "Hello - process_id(pid) = "<< getpid() << endl;
-
+    fork();
+    printf("PID: %d\n", (int) getpid());
     return 0;
 }
